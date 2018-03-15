@@ -21,7 +21,7 @@ a {
   font-weight: 600;
   text-transform: uppercase;
   display:inline-block;
-  margin: 10px 10px 10px 10px; 
+  margin: 10px 10px 10px 10px;
   color: #cccccc;
 }
 
@@ -31,9 +31,10 @@ h2 {
   font-weight: 600;
   text-transform: uppercase;
   display:inline-block;
-  margin: 20px 10px 0px 10px; 
+  margin: 20px 10px 0px 10px;
   color: #cccccc;
 }
+
 
 
 
@@ -42,7 +43,7 @@ h2 {
 .wrapper {
   display: flex;
   align-items: center;
-  flex-direction: column; 
+  flex-direction: column;
   justify-content: center;
   width: 100%;
   min-height: 100%;
@@ -96,9 +97,10 @@ h2.active {
 
 
 
+
 /* FORM TYPOGRAPHY*/
 
-input[type=button], input[type=submit], input[type=reset]  {
+input[type=button], input[type=submit], input[type=reset], button[type=submit] {
   background-color: #4E2A84;
   border: none;
   color: white;
@@ -107,7 +109,7 @@ input[type=button], input[type=submit], input[type=reset]  {
   text-decoration: none;
   display: inline-block;
   text-transform: uppercase;
-  
+
   font-size: 13px;
   -webkit-box-shadow: 0 10px 30px 0 rgb(255, 181, 0);
   box-shadow: 0px 5px 12px 0px rgb(255, 219, 153);
@@ -121,11 +123,11 @@ input[type=button], input[type=submit], input[type=reset]  {
   transition: all 0.3s ease-in-out;
 }
 
-input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
+input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover, button[type=submit]:hover{
   background-color: #ffb500;
 }
 
-input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
+input[type=button]:active, input[type=submit]:active, input[type=reset]:active, button[type=submit]:active {
   -moz-transform: scale(0.95);
   -webkit-transform: scale(0.95);
   -o-transform: scale(0.95);
@@ -133,7 +135,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=email], input[type=password]{
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -155,12 +157,12 @@ input[type=text] {
   border-radius: 5px 5px 5px 5px;
 }
 
-input[type=text]:focus {
+input[type=text]:focus,  input[type=email]:hover, input[type=password]:hover {
   background-color: #fff;
   border-bottom: 2px solid #ffb500;
 }
 
-input[type=text]:placeholder {
+input[type=text]:placeholder, input[type=email]:placeholder, input[type=password]:placeholder{
   color: #cccccc;
 }
 
@@ -280,13 +282,38 @@ input[type=text]:placeholder {
   color: #ffb500 ;
 }
 
+/* forgot password style*/
+
+.forgotpassword {
+  color: #4E2A84;
+}
+
+.forgotpassword:after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 2px;
+  background-color: #ffb500 ;
+  content: "";
+  transition: width 0.2s;
+}
+
+.forgotpassword:hover {
+  color: #ffb500;
+}
+
+.forgotpassword:hover:after{
+  width: 100%;
+  color: #ffb500 ;
+}
 
 
 /* OTHERS */
 
 *:focus {
     outline: none;
-} 
+}
 
 #icon {
   width:50%;
@@ -296,7 +323,7 @@ input[type=text]:placeholder {
   box-sizing: border-box;
 }
 
-#logo_name { 
+#logo_name {
   /*font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif; */
   font-family: Circular,-apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
 
@@ -310,13 +337,13 @@ input[type=text]:placeholder {
   margin: 5px 0 5px 0;
 }
 
-#logo { 
-height: 200px; 
+#logo {
+height: 200px;
 position: center;
 }
 
 #preferences_title {
-  color:#4E2A84; 
+  color:#4E2A84;
   font-size: 25px;
   font-family: "Julius Sans One", sans-serif;
   letter-spacing: 0.2px;
@@ -325,29 +352,29 @@ position: center;
   margin-top: 10px;
 }
 
-.btn-group { 
+.btn-group {
   margin: 10px;
   margin-right: 10px;
   font-size: 25px;
   width: 250px;
-  
+
 }
 
 
-.dropdown-menu>li>a { 
+.dropdown-menu>li>a {
   font-family: "Julius Sans One", sans-serif;
   letter-spacing: 0.2px;
   border-spacing: 0px;
   font-weight: 300;
   font-size: 20px;
   margin: 6px 0px 6px 0px;
-  color: #4E2A84; 
+  color: #4E2A84;
   box-sizing: border-box;
   width: 250px;
 }
 
 #diet_title {
-  color:#4E2A84; 
+  color:#4E2A84;
   font-size: 20px;
   font-family: "Julius Sans One", sans-serif;
   letter-spacing: 0.2px;
@@ -356,7 +383,7 @@ position: center;
   margin-top: 30px;
 }
 
-.chosen_select { 
+.chosen_select {
   margin: 10px;
   margin-right: 10px;
   font-size: 25px;
@@ -371,7 +398,7 @@ position: center;
   font-size: 20px;
   margin: 6px 0px 6px 0px;
   color: #4E2A84;
-  width: 250px; 
+  width: 250px;
   box-sizing: border-box;
 }
 
@@ -381,7 +408,7 @@ position: center;
   border-spacing: 0px;
   font-weight: 300;
   font-size: 20px;
-  color: #ffb500; 
+  color: #ffb500;
   padding-left: 110px;
   margin-top: 20px;
   text-align: left;
@@ -394,7 +421,7 @@ position: center;
   font-size: 18px;
   font-weight: normal;
   font-weight: 300px;
-  color: #ffb500; 
+  color: #ffb500;
   padding-left: 90px;
   margin-top: 30px;
   margin-bottom: 20px;
